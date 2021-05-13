@@ -1,0 +1,20 @@
+.hex_body {
+  width: 104px;
+  height: 60px;
+  background-color: gray;
+}
+
+.hex_top {
+  width: 0;
+  border-bottom: 30px solid gray;
+  border-left: 52px solid transparent;
+  border-right: 52px solid transparent;
+}
+
+.hex_bottom {
+  width: 0;
+  border-top: 30px solid gray;
+  border-left: 52px solid transparent;
+  border-right: 52px solid transparent;
+}
+
