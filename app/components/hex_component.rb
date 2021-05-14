@@ -1,6 +1,13 @@
 # frozen_string_literal: true
 
 class HexComponent < ApplicationComponent
-  def initialize(champion: "lux")
+  attr_accessor :champion
+
+  def initialize(champion:)
+    @champion = champion ||= "empty"
+  end
+
+  def format_name(champion:)
+    champion.split(" ").join("_").camelize
   end
 end

@@ -1,5 +1,11 @@
-<span style="font-size: 135px;">
-  &#x2B22;
-  <%= image_tag("set5/champions/TFT5_Soraka") %>
-</span>
-
+<% if champion == "empty" %>
+  <div class="hexagon bg-gray-300">
+    <div class="hexTop"></div>
+    <div class="hexBottom"></div>
+  </div>
+<% else %>
+  <div class="hexagon" style="background-image: url(<%= image_path("set5/champions/TFT5_#{format_name(champion: champion)}") %>)">
+    <div class="hexTop"></div>
+    <div class="hexBottom"></div>
+  </div>
+<% end %>

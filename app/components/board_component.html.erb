@@ -1,3 +1,9 @@
 <div class="board">
-  <!--> HexComponent.new</!-->
+  <% (0..3).each do |y| %>
+    <div class="flex board-row ">
+      <% (0..7).each do |x| %>
+        <%= render HexComponent.new(champion: @champions[[x,y]]) %>
+      <% end %>
+    </div>
+  <% end %>
 </div>
