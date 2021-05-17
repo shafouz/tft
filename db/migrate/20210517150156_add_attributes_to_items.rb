@@ -1,6 +1,5 @@
 class AddAttributesToItems < ActiveRecord::Migration[6.1]
-  include Seedable
-
   def change
+    add_column :items, 'item', :jsonb
   end
 end

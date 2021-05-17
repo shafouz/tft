@@ -1,26 +1,16 @@
-# items: {id:, name:, description:, isUnique:, isShadow:, shadowPenalty:, shadowBonus:}
-#
-
-# find file pash # 
-items_path = Rails.root.join("app/assets/images/set5/items.json").to_s 
-champions_path = Rails.root.join("app/assets/images/set5/champions.json").to_s 
-traits_path = Rails.root.join("app/assets/images/set5/traits.json").to_s 
-
-# read json #
-items = File.open(items_path) {|file| JSON.load(file)}
-champions = File.open(champions_path) {|file| JSON.load(file)}
-traits = File.open(traits_path) {|file| JSON.load(file)}
+items = Seedable.new("items").file
+champions = Seedable.new("champions").file
+traits = Seedable.new("traits").file
 
 # seed #
 items.each do |item|
-  Item.create(item)
+  Item.create(item: item)
 end
 
 champions.each do |champion|
-  Champion.create(champion)
+  Champion.create(champion: champion)
 end
 
 traits.each do |trait|
-  Trait.create(trait)
+  Trait.create(trait: trait)
 end
-
