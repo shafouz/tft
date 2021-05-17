@@ -11,19 +11,6 @@ items = File.open(items_path) {|file| JSON.load(file)}
 champions = File.open(champions_path) {|file| JSON.load(file)}
 traits = File.open(traits_path) {|file| JSON.load(file)}
 
-# find keys #
-def find_keys(array)
-  results = []
-  array.each do |el|
-    results << el.keys
-  end
-  results = results.flatten.uniq
-end
-
-# create columns #
-def create_columns(keys)
-end
-
 # seed #
 items.each do |item|
   Item.create(item)
