@@ -1,0 +1,49 @@
+<div class="flex w-full h-full">
+  <div class="border-2 border-black w-4/12 p-5 pt-10 m-5 flex flex-col items-center">
+    <div class="champion-name font-bold text-xl">
+      <%= @champion.details["name"] %>
+    </div>
+    <div class="champion-image mb-0.5">
+      <%= image_tag("set5/champions/#{@champion.details["championId"]}") %>
+    </div>
+    <div class="champion-items flex flex-row">
+      <div class="item-1 w-8 h-8">
+        <%= image_tag("set5/items/01") %>
+      </div>
+      <div class="item-2 w-8 h-8 mx-0.5">
+        <%= image_tag("set5/items/01") %>
+      </div>
+      <div class="item-3 w-8 h-8">
+        <%= image_tag("set5/items/01") %>
+      </div>
+    </div>
+    <div class="champion-traits flex flex-row">
+      <% @champion.traits.each_with_index do |trait, i| %>
+        <div class="trait-<%= i + 1 %> w-12 h-12 my-5 mx-1">
+          <%= image_tag("set5/traits/#{trait["name"].downcase}") %>
+        </div>
+      <% end %>
+    </div>
+    <div class="champion-cost">
+      Cost: <%= @champion.details["cost"] %>
+    </div>
+  </div>
+  <div class="traits h-full border-2 border-black w-8/12">
+    <% @champion.traits.each_with_index do |trait, i| %>
+      <div class="flex flex-row">
+        <div class="flex flex-col items-center h-24 w-20 my-7 ml-7">
+          <div class="trait-name flex items-center mb-5">
+            <%= trait["name"] %>
+          </div>
+          <div class="trait-<%= i + 1 %>">
+            <%= image_tag("set5/traits/#{trait["name"].downcase}.svg") %>
+
+          </div>
+        </div>
+        <div class="trait-description flex items-center p-10">
+          <%= trait["description"] %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

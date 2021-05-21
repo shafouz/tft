@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-include ChampionsHelper
+include ViewsHelper
 
 class HexComponent < ApplicationComponent
   attr_accessor :champion

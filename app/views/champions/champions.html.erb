@@ -1,9 +1,8 @@
 <% @champions.each do |champion| %>
-  <%= champion_image_tag(champion: champion.champion["name"]) %>
-  <%= champion.champion["cost"] %>
-  <%= champion.champion["name"] %>
-  <% champion.champion["traits"].each do |trait| %>
+  <%= image_tag("set5/champions/#{champion.details["championId"]}") %>
+  <%= champion.details["cost"] %>
+  <%= champion.details["name"] %>
+  <% champion.details["traits"].each do |trait| %>
     <%= trait %>
   <% end %>
-  <%= champion.champion["championId"] %>
 <% end %>

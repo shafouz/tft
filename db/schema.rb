@@ -18,19 +18,19 @@ ActiveRecord::Schema.define(version: 2021_05_17_190533) do
   create_table "champions", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.jsonb "champion"
+    t.jsonb "details"
   end
 
   create_table "items", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.jsonb "item"
+    t.jsonb "details"
   end
 
   create_table "traits", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.jsonb "trait"
+    t.jsonb "details"
   end
 
 end

@@ -1,4 +1,2 @@
-<%= render BoardComponent.new(champions: {
-  [1,2] => "lux", [2,3] => "jax", [0,0] => "le blanc",
-  [7,0] => "lee sin"
-}) %>
+<%= render HeaderComponent.new(title: "Jax") %>
+<%= render ChampionListComponent.new(champions: "Jax") %>

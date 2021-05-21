@@ -1,5 +1,5 @@
 class AddAttributesToChampions < ActiveRecord::Migration[6.1]
   def change
-    add_column :champions, 'champion', :jsonb
+    add_column :champions, 'details', :jsonb
   end
 end

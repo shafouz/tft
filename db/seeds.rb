@@ -4,13 +4,13 @@ traits = Seedable.new("traits").file
 
 # seed #
 items.each do |item|
-  Item.create(item: item)
+  Item.create(details: item)
 end
 
 champions.each do |champion|
-  Champion.create(champion: champion)
+  Champion.create(details: champion)
 end
 
 traits.each do |trait|
-  Trait.create(trait: trait)
+  Trait.create(details: trait)
 end
